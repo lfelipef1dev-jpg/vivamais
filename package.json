@@ -1,0 +1,8 @@
+{
+  "name": "vivamais",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p out && cp index.html style.css favicon.svg out/ && cp img-*.jpg pessoa*.jpg medica*.jpg medico*.jpg out/ 2>/dev/null || true"
+  }
+}
