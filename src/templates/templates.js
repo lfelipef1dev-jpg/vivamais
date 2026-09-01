@@ -269,6 +269,7 @@ function buildMedicalClinic() {
     url: BASE_URL + '/',
     telephone: clinic.phone,
     email: clinic.email,
+    dateModified: new Date().toISOString().split('T')[0],
     address: {
       '@type': 'PostalAddress',
       streetAddress: clinic.address.street,
@@ -310,6 +311,10 @@ function buildOrganization() {
     logo: BASE_URL + '/favicon.svg',
     telephone: clinic.phone,
     email: clinic.email,
+    sameAs: [
+      'https://expostacker.com.br',
+      'https://github.com/lfelipef1dev-jpg'
+    ],
     address: {
       '@type': 'PostalAddress',
       streetAddress: clinic.address.street,
@@ -340,7 +345,8 @@ function buildMedicalSpecialty(spec) {
     '@context': 'https://schema.org',
     '@type': 'MedicalSpecialty',
     name: spec.name,
-    description: spec.longDescription
+    description: spec.longDescription,
+    dateModified: new Date().toISOString().split('T')[0]
   };
 }
 
@@ -353,7 +359,8 @@ function buildPhysician(doc, specName) {
     hospitalAffiliation: clinic.name,
     identifier: doc.crm,
     description: doc.bio,
-    url: BASE_URL + '/medico-' + doc.slug + '.html'
+    url: BASE_URL + '/medico-' + doc.slug + '.html',
+    dateModified: new Date().toISOString().split('T')[0]
   };
 }
 
@@ -367,6 +374,7 @@ function buildArticle(article) {
       name: article.author
     },
     datePublished: article.date,
+    dateModified: article.dateModified || article.date,
     description: article.excerpt,
     articleBody: article.content.join(' '),
     publisher: {
@@ -407,7 +415,8 @@ function buildAboutPage() {
     '@type': 'AboutPage',
     name: 'Sobre a VivaMais',
     description: 'Conheça a VivaMais: propósito, valores, modelo de atendimento e equipe. Plataforma demonstrativa para saúde integrada com cuidado humanizado.',
-    url: BASE_URL + '/sobre.html'
+    url: BASE_URL + '/sobre.html',
+    dateModified: new Date().toISOString().split('T')[0]
   };
 }
 
@@ -419,6 +428,7 @@ function buildLocalBusiness() {
     description: 'Como chegar à VivaMais: endereço, telefone, WhatsApp, horários de funcionamento.',
     url: BASE_URL + '/localizacao.html',
     telephone: clinic.phone,
+    dateModified: new Date().toISOString().split('T')[0],
     address: {
       '@type': 'PostalAddress',
       streetAddress: clinic.address.street,

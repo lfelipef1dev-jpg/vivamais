@@ -81,7 +81,6 @@ function renderPage() {
     canonical: 'faq',
     extraScripts: ['scripts/content-script.js'],
     jsonLd: [
-      T.buildFAQPage(faqs),
       T.buildBreadcrumbList([
         { name: 'Início', slug: 'index' },
         { name: 'FAQ', slug: 'faq' }

@@ -59,33 +59,10 @@ const today = new Date().toISOString().split('T')[0];
 
 function getSitemapEntry(pageSlug) {
   const loc = SITEMAP_BASE + '/' + (pageSlug === 'index' ? '' : pageSlug + '.html');
-  var changefreq = 'weekly';
-  var priority = '0.8';
-  if (pageSlug === 'index') {
-    changefreq = 'daily';
-    priority = '1.0';
-  } else if (pageSlug.indexOf('especialidade') === 0 || pageSlug.indexOf('medico-') === 0 || pageSlug === 'profissionais' || pageSlug === 'especialidades') {
-    changefreq = 'weekly';
-    priority = '0.8';
-  } else if (pageSlug.indexOf('artigo-') === 0 || pageSlug === 'blog') {
-    changefreq = 'weekly';
-    priority = '0.7';
-  } else if (pageSlug === 'agendamento' || pageSlug === 'convenios' || pageSlug === 'localizacao') {
-    changefreq = 'weekly';
-    priority = '0.8';
-  } else if (pageSlug === 'sobre' || pageSlug === 'faq') {
-    changefreq = 'monthly';
-    priority = '0.6';
-  } else if (pageSlug === 'privacidade' || pageSlug === 'termos' || pageSlug === 'cookies') {
-    changefreq = 'monthly';
-    priority = '0.3';
-  }
   return [
     '  <url>',
     '    <loc>' + loc + '</loc>',
     '    <lastmod>' + today + '</lastmod>',
-    '    <changefreq>' + changefreq + '</changefreq>',
-    '    <priority>' + priority + '</priority>',
     '  </url>'
   ].join('\n');
 }
