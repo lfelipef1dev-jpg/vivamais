@@ -290,12 +290,7 @@
 .hero-bullet svg { width: 20px; height: 20px; color: var(--accent); flex: none; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
 
-.hero-visual-wrap {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: var(--space-4);
-  align-items: end;
-}
+.hero-visual-wrap { position: relative; }
 .hero-visual {
   border-radius: var(--radius-card);
   overflow: hidden;
@@ -304,15 +299,6 @@
   aspect-ratio: 4 / 3;
 }
 .hero-visual img { width: 100%; height: 100%; object-fit: cover; }
-
-.hero-schedule-card {
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-lg);
-  padding: var(--space-4) var(--space-5);
-  width: 100%;
-}
 .hero-schedule-head {
   display: flex;
   align-items: center;
@@ -349,7 +335,6 @@
 @media (max-width: 860px) {
   .hero-inner { grid-template-columns: 1fr; gap: var(--space-6); }
   .hero-bullets { grid-template-columns: 1fr; }
-  .hero-visual-wrap { grid-template-columns: 1fr; }
 }
 
 /* =========================================================
