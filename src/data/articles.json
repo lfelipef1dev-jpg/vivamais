@@ -12,7 +12,8 @@
     "category": "Cardiologia",
     "author": "Dra. Ana Souza",
     "date": "2025-09-15",
-    "readTime": "4 min"
+    "readTime": "4 min",
+    "image": "blog-cardio.jpg"
   },
   {
     "id": "art-2",
@@ -27,7 +28,8 @@
     "category": "Dermatologia",
     "author": "Dr. Bruno Lima",
     "date": "2025-09-22",
-    "readTime": "3 min"
+    "readTime": "3 min",
+    "image": "blog-derma.jpg"
   },
   {
     "id": "art-3",
@@ -42,7 +44,8 @@
     "category": "Ortopedia",
     "author": "Dra. Carla Mendes",
     "date": "2025-10-03",
-    "readTime": "4 min"
+    "readTime": "4 min",
+    "image": "blog-orto.jpg"
   },
   {
     "id": "art-4",
@@ -57,7 +60,8 @@
     "category": "Pediatria",
     "author": "Dra. Diana Rocha",
     "date": "2025-10-10",
-    "readTime": "3 min"
+    "readTime": "3 min",
+    "image": "blog-pedi.jpg"
   },
   {
     "id": "art-5",
@@ -72,7 +76,8 @@
     "category": "Ginecologia",
     "author": "Dr. Eduardo Santos",
     "date": "2025-10-17",
-    "readTime": "4 min"
+    "readTime": "4 min",
+    "image": "blog-gine.jpg"
   },
   {
     "id": "art-6",
@@ -87,7 +92,8 @@
     "category": "Clínica Geral",
     "author": "Dr. Fernando Costa",
     "date": "2025-10-24",
-    "readTime": "3 min"
+    "readTime": "3 min",
+    "image": "blog-geral.jpg"
   },
   {
     "id": "art-7",
@@ -102,7 +108,8 @@
     "category": "Bem-estar",
     "author": "Equipe VivaMais",
     "date": "2025-11-05",
-    "readTime": "5 min"
+    "readTime": "5 min",
+    "image": "blog-bem.jpg"
   },
   {
     "id": "art-8",
@@ -117,6 +124,7 @@
     "category": "Bem-estar",
     "author": "Equipe VivaMais",
     "date": "2025-11-12",
-    "readTime": "3 min"
+    "readTime": "3 min",
+    "image": "blog-bem.jpg"
   }
 ]

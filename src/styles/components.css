@@ -13,11 +13,11 @@
 @media (max-width: 480px) {
   .container { padding-inline: var(--space-4); }
 }
-.section { padding-block: var(--space-9); }
-.section-alt { background: var(--surface); padding-block: var(--space-9); }
-.section-tight { padding-block: var(--space-7); }
+.section { padding-block: var(--space-7); }
+.section-alt { background: var(--surface); padding-block: var(--space-7); }
+.section-tight { padding-block: var(--space-6); }
 @media (max-width: 600px) {
-  .section, .section-alt { padding-block: var(--space-7); }
+  .section, .section-alt { padding-block: var(--space-6); }
 }
 
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-5); }

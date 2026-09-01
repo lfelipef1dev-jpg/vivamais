@@ -46,6 +46,7 @@ function renderArticle(article, allArticles, doctors, specialties) {
     '      <span class="article-hero-date">' + icons.calendar + ' ' + T.escapeHtml(blog.formatDate(article.date)) + '</span>',
     '      <span class="article-hero-time">' + icons.clock + ' ' + T.escapeHtml(article.readTime) + ' de leitura</span>',
     '    </div>',
+    '    <div class="article-hero-cover"><img src="' + T.escapeAttr(article.image) + '" alt="Imagem ilustrativa sobre ' + T.escapeAttr(article.category) + ' — demonstração" loading="eager" width="1200" height="500"></div>',
     '  </div>',
     '</section>'
   ].join('\n');

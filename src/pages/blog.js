@@ -56,7 +56,7 @@ function renderPage() {
     return [
       '<article class="card card-hover blog-card blog-item" data-category="' + T.escapeAttr(a.category) + '" data-title="' + T.escapeAttr(a.title.toLowerCase()) + '">',
       '  <a class="blog-card-link" href="artigo-' + a.slug + '.html">',
-      '    <div class="blog-card-cover" aria-hidden="true"><span class="blog-card-cover-cat">' + T.escapeHtml(a.category) + '</span></div>',
+      '    <div class="blog-card-cover"><img src="' + T.escapeAttr(a.image) + '" alt="Imagem ilustrativa sobre ' + T.escapeAttr(a.category) + ' — demonstração" loading="lazy" width="600" height="400"><span class="blog-card-cover-cat">' + T.escapeHtml(a.category) + '</span></div>',
       '    <span class="blog-card-cat badge">' + T.escapeHtml(a.category) + '</span>',
       '    <h2 class="card-title blog-card-title">' + T.escapeHtml(a.title) + '</h2>',
       '    <p class="card-body blog-card-excerpt">' + T.escapeHtml(a.excerpt) + '</p>',

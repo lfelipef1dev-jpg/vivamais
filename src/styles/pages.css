@@ -223,8 +223,8 @@
 .footer {
   background: var(--surface);
   border-top: 1px solid var(--border);
-  padding-block: var(--space-8) var(--space-5);
-  margin-top: var(--space-9);
+  padding-block: var(--space-7) var(--space-5);
+  margin-top: var(--space-7);
 }
 .footer-grid {
   display: grid;
@@ -261,7 +261,7 @@
    ========================================================= */
 .hero {
   background: linear-gradient(180deg, #FFFFFF 0%, var(--surface) 100%);
-  padding-block: var(--space-9) var(--space-8);
+  padding-block: var(--space-7) var(--space-6);
   position: relative;
   overflow: hidden;
 }
@@ -378,7 +378,7 @@
 /* =========================================================
    HOME — BUSCA
    ========================================================= */
-.section-busca { padding-block: var(--space-8); }
+.section-busca { padding-block: var(--space-7); }
 .search-box {
   max-width: 720px;
   margin-inline: auto;
@@ -703,7 +703,7 @@
 /* =========================================================
    HOME — CTA FINAL
    ========================================================= */
-.cta-final { padding-block: var(--space-8); }
+.cta-final { padding-block: var(--space-7); }
 .cta-final-card {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
   border-radius: var(--radius-card);
@@ -762,7 +762,7 @@
 .page-hero .eyebrow { position: relative; margin-bottom: var(--space-2); }
 
 /* ---------- Page hero com especialidade ---------- */
-.page-hero-spec { padding-block: var(--space-8) var(--space-7); }
+.page-hero-spec { padding-block: var(--space-7) var(--space-6); }
 .page-hero-spec-inner {
   display: flex;
   align-items: center;
@@ -787,7 +787,7 @@
 }
 
 /* ---------- Page hero com médico ---------- */
-.page-hero-doctor { padding-block: var(--space-8) var(--space-7); }
+.page-hero-doctor { padding-block: var(--space-7) var(--space-6); }
 .doctor-hero {
   display: flex;
   align-items: center;
@@ -1187,7 +1187,7 @@
 .booking-hero { padding-block: var(--space-7) var(--space-6); }
 .booking-hero-badge { margin-top: var(--space-4); }
 .booking-hero-badge svg { width: 16px; height: 16px; }
-.booking-section { padding-block: var(--space-6) var(--space-8); }
+.booking-section { padding-block: var(--space-6) var(--space-7); }
 
 /* ---------- Progress indicator ---------- */
 .wizard-progress {
@@ -1673,7 +1673,7 @@
    PORTAL DO PACIENTE — login
    ========================================================= */
 .portal-login-hero { padding-block: var(--space-7) var(--space-5); }
-.portal-login-section { padding-block: var(--space-6) var(--space-9); }
+.portal-login-section { padding-block: var(--space-6) var(--space-7); }
 .portal-login-wrap {
   max-width: 480px;
   margin: 0 auto;
@@ -1732,7 +1732,7 @@
 /* =========================================================
    PORTAL DO PACIENTE — dashboard
    ========================================================= */
-.portal { padding-block: var(--space-5) var(--space-8); min-height: 60vh; }
+.portal { padding-block: var(--space-5) var(--space-7); min-height: 60vh; }
 .portal-container {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -2149,7 +2149,10 @@
   overflow: hidden;
   transition: transform var(--dur) var(--ease);
 }
+.blog-card-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .blog-card:hover .blog-card-cover { transform: scale(1.02); }
+.blog-card:hover .blog-card-cover img { transform: scale(1.04); }
+.blog-card-cover img { transition: transform var(--dur) var(--ease); }
 .blog-card-cover-cat {
   position: absolute;
   inset: auto auto var(--space-3) var(--space-3);
@@ -2238,6 +2241,15 @@
   gap: 6px;
 }
 .article-hero-meta svg { width: 18px; height: 18px; color: var(--accent); flex: none; }
+
+.article-hero-cover {
+  margin-top: var(--space-5);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 12 / 5;
+}
+.article-hero-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .article-layout {
   display: grid;
@@ -2581,7 +2593,7 @@
    404
    ========================================================= */
 .error-section {
-  padding-block: var(--space-9);
+  padding-block: var(--space-7);
   min-height: 60vh;
   display: flex;
   align-items: center;
