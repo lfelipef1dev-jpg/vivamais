@@ -290,7 +290,12 @@
 .hero-bullet svg { width: 20px; height: 20px; color: var(--accent); flex: none; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
 
-.hero-visual-wrap { position: relative; }
+.hero-visual-wrap {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-4);
+  align-items: end;
+}
 .hero-visual {
   border-radius: var(--radius-card);
   overflow: hidden;
@@ -301,16 +306,12 @@
 .hero-visual img { width: 100%; height: 100%; object-fit: cover; }
 
 .hero-schedule-card {
-  position: absolute;
-  left: -24px;
-  bottom: -24px;
   background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-lg);
   padding: var(--space-4) var(--space-5);
-  width: 280px;
-  max-width: 90%;
+  width: 100%;
 }
 .hero-schedule-head {
   display: flex;
@@ -348,7 +349,7 @@
 @media (max-width: 860px) {
   .hero-inner { grid-template-columns: 1fr; gap: var(--space-6); }
   .hero-bullets { grid-template-columns: 1fr; }
-  .hero-schedule-card { position: static; width: 100%; max-width: 360px; margin-top: var(--space-4); }
+  .hero-visual-wrap { grid-template-columns: 1fr; }
 }
 
 /* =========================================================
@@ -616,8 +617,10 @@
    ========================================================= */
 .gallery {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-4);
+  max-width: 960px;
+  margin: 0 auto;
 }
 .gallery-item {
   border-radius: var(--radius-card);
@@ -626,16 +629,13 @@
   aspect-ratio: 4 / 3;
   background: var(--surface);
 }
-.gallery-item:first-child { aspect-ratio: 3 / 4; }
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 400ms var(--ease); }
 .gallery-item:hover img { transform: scale(1.05); }
 @media (max-width: 800px) {
-  .gallery { grid-template-columns: 1fr 1fr; }
-  .gallery-item:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 480px) {
   .gallery { grid-template-columns: 1fr; }
-  .gallery-item:first-child { aspect-ratio: 16 / 9; }
 }
 
 /* =========================================================
