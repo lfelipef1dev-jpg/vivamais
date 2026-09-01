@@ -1,0 +1,126 @@
+[
+  {
+    "id": "doc-1",
+    "slug": "ana-souza",
+    "name": "Dra. Ana Souza",
+    "specialty": "cardiologia",
+    "crm": "CRM-DEMO-101",
+    "rqe": "RQE-DEMO-201",
+    "photo": "pessoa1.jpg",
+    "bio": "Cardiologista com foco em prevenção e acompanhamento contínuo. Acredita em cuidado humano e informação clara.",
+    "education": ["Medicina — Universidade Demonstrativa", "Residência em Cardiologia — Hospital Demo"],
+    "areas": ["Hipertensão", "Prevenção cardiovascular", "Ecocardiograma"],
+    "languages": ["Português", "Inglês"],
+    "insurance": ["unimed", "bradesco-saude", "sul-america"],
+    "location": "Unidade Centro — Demonstração",
+    "schedule": {
+      "seg": ["08:00", "09:00", "10:00"],
+      "qua": ["08:00", "09:00", "10:00"],
+      "sex": ["14:00", "15:00", "16:00"]
+    },
+    "rating": null
+  },
+  {
+    "id": "doc-2",
+    "slug": "bruno-lima",
+    "name": "Dr. Bruno Lima",
+    "specialty": "dermatologia",
+    "crm": "CRM-DEMO-102",
+    "rqe": "RQE-DEMO-202",
+    "photo": "medico1.jpg",
+    "bio": "Dermatologista com abordagem clínica e estética responsável. Prioriza diagnóstico seguro e orientação honesta.",
+    "education": ["Medicina — Universidade Demonstrativa", "Residência em Dermatologia — Hospital Demo"],
+    "areas": ["Acne", "Lesões de pele", "Dermatite"],
+    "languages": ["Português", "Espanhol"],
+    "insurance": ["unimed", "amil", "notredame"],
+    "location": "Unidade Centro — Demonstração",
+    "schedule": {
+      "ter": ["09:00", "10:00", "11:00"],
+      "qui": ["09:00", "10:00", "11:00"]
+    },
+    "rating": null
+  },
+  {
+    "id": "doc-3",
+    "slug": "carla-mendes",
+    "name": "Dra. Carla Mendes",
+    "specialty": "ortopedia",
+    "crm": "CRM-DEMO-103",
+    "rqe": "RQE-DEMO-203",
+    "photo": "pessoa2.jpg",
+    "bio": "Ortopedista com experiência em lesões por esforço e reabilitação. Foco em devolver movimento com segurança.",
+    "education": ["Medicina — Universidade Demonstrativa", "Residência em Ortopedia — Hospital Demo"],
+    "areas": ["Lesões esportivas", "Joelho", "Ombro"],
+    "languages": ["Português"],
+    "insurance": ["unimed", "bradesco-saude", "sul-america", "amil"],
+    "location": "Unidade Centro — Demonstração",
+    "schedule": {
+      "seg": ["10:00", "11:00"],
+      "qua": ["10:00", "11:00"],
+      "sex": ["09:00", "10:00"]
+    },
+    "rating": null
+  },
+  {
+    "id": "doc-4",
+    "slug": "diana-rocha",
+    "name": "Dra. Diana Rocha",
+    "specialty": "pediatria",
+    "crm": "CRM-DEMO-104",
+    "rqe": "RQE-DEMO-204",
+    "photo": "medica1.jpg",
+    "bio": "Pediatra dedicada ao desenvolvimento infantil. Escuta famílias com paciência e clareza.",
+    "education": ["Medicina — Universidade Demonstrativa", "Residência em Pediatria — Hospital Demo"],
+    "areas": ["Puericultura", "Vacinação", "Desenvolvimento infantil"],
+    "languages": ["Português", "Inglês"],
+    "insurance": ["unimed", "amil", "notredame", "hapvida"],
+    "location": "Unidade Centro — Demonstração",
+    "schedule": {
+      "ter": ["08:00", "09:00", "10:00", "11:00"],
+      "qui": ["08:00", "09:00", "10:00", "11:00"]
+    },
+    "rating": null
+  },
+  {
+    "id": "doc-5",
+    "slug": "eduardo-santos",
+    "name": "Dr. Eduardo Santos",
+    "specialty": "ginecologia",
+    "crm": "CRM-DEMO-105",
+    "rqe": "RQE-DEMO-205",
+    "photo": "medico2.jpg",
+    "bio": "Ginecologista e obstetra com abordagem humanizada. Acompanha mulheres em todas as fases da vida.",
+    "education": ["Medicina — Universidade Demonstrativa", "Residência em Ginecologia — Hospital Demo"],
+    "areas": ["Prevenção", "Planejamento familiar", "Pré-natal"],
+    "languages": ["Português"],
+    "insurance": ["unimed", "bradesco-saude", "sul-america"],
+    "location": "Unidade Centro — Demonstração",
+    "schedule": {
+      "seg": ["14:00", "15:00", "16:00"],
+      "qua": ["14:00", "15:00", "16:00"]
+    },
+    "rating": null
+  },
+  {
+    "id": "doc-6",
+    "slug": "fernando-costa",
+    "name": "Dr. Fernando Costa",
+    "specialty": "clinica-geral",
+    "crm": "CRM-DEMO-106",
+    "rqe": "RQE-DEMO-206",
+    "photo": "pessoa3.jpg",
+    "bio": "Clínico geral focado em cuidado contínuo e prevenção. Coordena encaminhamentos com visão integral.",
+    "education": ["Medicina — Universidade Demonstrativa", "Residência em Medicina de Família — Hospital Demo"],
+    "areas": ["Check-up", "Acompanhamento crônico", "Prevenção"],
+    "languages": ["Português", "Inglês"],
+    "insurance": ["unimed", "amil", "notredame", "hapvida", "bradesco-saude"],
+    "location": "Unidade Centro — Demonstração",
+    "schedule": {
+      "seg": ["08:00", "09:00", "10:00", "11:00"],
+      "ter": ["08:00", "09:00"],
+      "qui": ["14:00", "15:00", "16:00"],
+      "sex": ["08:00", "09:00"]
+    },
+    "rating": null
+  }
+]

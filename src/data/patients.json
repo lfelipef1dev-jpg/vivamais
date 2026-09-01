@@ -1,0 +1,10 @@
+[
+  { "id": "pat-1", "name": "Maria Demonstração", "email": "maria.demo@vivamais.demo", "phone": "(11) 90000-0001", "insurance": "unimed", "birthDate": "1985-03-12", "lastVisit": "2025-01-20" },
+  { "id": "pat-2", "name": "João Demonstração", "email": "joao.demo@vivamais.demo", "phone": "(11) 90000-0002", "insurance": "amil", "birthDate": "1990-07-25", "lastVisit": "2025-01-21" },
+  { "id": "pat-3", "name": "Ana Demonstração", "email": "ana.demo@vivamais.demo", "phone": "(11) 90000-0003", "insurance": "bradesco-saude", "birthDate": "1978-11-02", "lastVisit": "2025-01-22" },
+  { "id": "pat-4", "name": "Carlos Demonstração", "email": "carlos.demo@vivamais.demo", "phone": "(11) 90000-0004", "insurance": "notredame", "birthDate": "2015-05-18", "lastVisit": "2025-01-22" },
+  { "id": "pat-5", "name": "Beatriz Demonstração", "email": "beatriz.demo@vivamais.demo", "phone": "(11) 90000-0005", "insurance": "unimed", "birthDate": "1992-09-30", "lastVisit": "2025-01-23" },
+  { "id": "pat-6", "name": "Pedro Demonstração", "email": "pedro.demo@vivamais.demo", "phone": "(11) 90000-0006", "insurance": "particular", "birthDate": "1980-01-08", "lastVisit": "2025-01-23" },
+  { "id": "pat-7", "name": "Lucas Demonstração", "email": "lucas.demo@vivamais.demo", "phone": "(11) 90000-0007", "insurance": "unimed", "birthDate": "1988-12-14", "lastVisit": "2025-01-24" },
+  { "id": "pat-8", "name": "Juliana Demonstração", "email": "juliana.demo@vivamais.demo", "phone": "(11) 90000-0008", "insurance": "sul-america", "birthDate": "1995-04-21", "lastVisit": "2025-01-24" }
+]

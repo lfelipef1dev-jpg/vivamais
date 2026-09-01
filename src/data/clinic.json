@@ -1,0 +1,26 @@
+{
+  "name": "VivaMais",
+  "tagline": "Cuidar de gente, com gente.",
+  "address": {
+    "street": "Av. Demonstração, 1000 — Sala 101",
+    "city": "São Paulo",
+    "state": "SP",
+    "zip": "00000-000",
+    "note": "Endereço demonstrativo."
+  },
+  "phone": "(11) 3000-0000",
+  "whatsapp": "(11) 90000-0000",
+  "email": "contato@vivamais.demo",
+  "hours": [
+    { "day": "Segunda a Sexta", "time": "07h00 às 19h00" },
+    { "day": "Sábado", "time": "08h00 às 13h00" },
+    { "day": "Domingo e Feriados", "time": "Fechado" }
+  ],
+  "geo": { "lat": -23.5505, "lng": -46.6333 },
+  "social": [
+    { "label": "Instagram", "href": "#", "icon": "instagram" },
+    { "label": "LinkedIn", "href": "#", "icon": "linkedin" },
+    { "label": "YouTube", "href": "#", "icon": "youtube" }
+  ],
+  "demoNotice": "Plataforma demonstrativa. Todos os dados são fictícios."
+}

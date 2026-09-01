@@ -1,0 +1,63 @@
+{
+  "demoNotice": "Métricas demonstrativas, não refletem pacientes reais.",
+  "visits": {
+    "last30Days": 12480,
+    "series": [
+      { "date": "2025-01-01", "value": 380 },
+      { "date": "2025-01-02", "value": 420 },
+      { "date": "2025-01-03", "value": 410 },
+      { "date": "2025-01-04", "value": 300 },
+      { "date": "2025-01-05", "value": 290 },
+      { "date": "2025-01-06", "value": 460 },
+      { "date": "2025-01-07", "value": 520 },
+      { "date": "2025-01-08", "value": 540 },
+      { "date": "2025-01-09", "value": 510 },
+      { "date": "2025-01-10", "value": 490 },
+      { "date": "2025-01-11", "value": 360 },
+      { "date": "2025-01-12", "value": 350 },
+      { "date": "2025-01-13", "value": 600 },
+      { "date": "2025-01-14", "value": 620 },
+      { "date": "2025-01-15", "value": 640 },
+      { "date": "2025-01-16", "value": 610 },
+      { "date": "2025-01-17", "value": 580 },
+      { "date": "2025-01-18", "value": 400 },
+      { "date": "2025-01-19", "value": 390 },
+      { "date": "2025-01-20", "value": 660 },
+      { "date": "2025-01-21", "value": 680 },
+      { "date": "2025-01-22", "value": 700 },
+      { "date": "2025-01-23", "value": 690 },
+      { "date": "2025-01-24", "value": 650 },
+      { "date": "2025-01-25", "value": 430 },
+      { "date": "2025-01-26", "value": 420 },
+      { "date": "2025-01-27", "value": 720 },
+      { "date": "2025-01-28", "value": 740 },
+      { "date": "2025-01-29", "value": 760 },
+      { "date": "2025-01-30", "value": 780 }
+    ]
+  },
+  "appointmentsStarted": 842,
+  "appointmentsCompleted": 614,
+  "conversionRate": 0.067,
+  "bySpecialty": {
+    "cardiologia": 180,
+    "dermatologia": 140,
+    "ortopedia": 120,
+    "pediatria": 160,
+    "ginecologia": 130,
+    "clinica-geral": 112
+  },
+  "byOrigin": {
+    "google": 4200,
+    "direct": 3100,
+    "instagram": 2400,
+    "referral": 1600,
+    "email": 1180
+  },
+  "funil": {
+    "visita": 12480,
+    "especialidade": 4200,
+    "medico": 2100,
+    "agendamento_iniciado": 842,
+    "agendamento_concluido": 614
+  }
+}

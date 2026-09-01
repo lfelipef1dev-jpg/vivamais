@@ -1,0 +1,10 @@
+[
+  { "id": "ins-1", "slug": "unimed", "name": "Unimed", "logo": null, "specialties": ["cardiologia", "dermatologia", "ortopedia", "pediatria", "ginecologia", "clinica-geral"], "status": "active" },
+  { "id": "ins-2", "slug": "bradesco-saude", "name": "Bradesco Saúde", "logo": null, "specialties": ["cardiologia", "ortopedia", "ginecologia", "clinica-geral"], "status": "active" },
+  { "id": "ins-3", "slug": "sul-america", "name": "SulAmérica", "logo": null, "specialties": ["cardiologia", "ortopedia", "ginecologia"], "status": "active" },
+  { "id": "ins-4", "slug": "amil", "name": "Amil", "logo": null, "specialties": ["dermatologia", "ortopedia", "pediatria", "clinica-geral"], "status": "active" },
+  { "id": "ins-5", "slug": "notredame", "name": "Notredame Intermédica", "logo": null, "specialties": ["dermatologia", "pediatria", "clinica-geral"], "status": "active" },
+  { "id": "ins-6", "slug": "hapvida", "name": "Hapvida Notre Dame", "logo": null, "specialties": ["pediatria", "clinica-geral"], "status": "active" },
+  { "id": "ins-7", "slug": "porto-seguro", "name": "Porto Seguro Saúde", "logo": null, "specialties": ["cardiologia", "clinica-geral"], "status": "active" },
+  { "id": "ins-8", "slug": "particular", "name": "Particular", "logo": null, "specialties": ["cardiologia", "dermatologia", "ortopedia", "pediatria", "ginecologia", "clinica-geral"], "status": "active" }
+]

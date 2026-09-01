@@ -1,0 +1,122 @@
+[
+  {
+    "id": "art-1",
+    "slug": "prevencao-cardiovascular-no-dia-a-dia",
+    "title": "Prevenção cardiovascular no dia a dia",
+    "excerpt": "Pequenos hábitos que protegem o coração a longo prazo, sem radicalismos.",
+    "content": [
+      "Cuidar do coração não exige mudanças radicais. Pequenos ajustes na rotina — como caminhar mais, reduzir ultraprocessados e dormir melhor — já trazem resultados consistentes ao longo dos anos.",
+      "O acompanhamento médico regular permite identificar fatores de risco como pressão alta e colesterol antes que virem problema. Na VivaMais, o foco é prevenção com informação clara.",
+      "Lembre-se: cada pessoa tem uma história. O plano ideal é sempre personalizado, construído junto com o profissional de saúde."
+    ],
+    "category": "Cardiologia",
+    "author": "Dra. Ana Souza",
+    "date": "2025-01-15",
+    "readTime": "4 min"
+  },
+  {
+    "id": "art-2",
+    "slug": "cuidados-com-a-pele-no-verao",
+    "title": "Cuidados com a pele no verão",
+    "excerpt": "Proteção solar, hidratação e sinais de alerta que merecem atenção.",
+    "content": [
+      "O verão pede atenção redobrada com a pele. Protetor solar diário, hidratação e evitar exposição nas horas de pico são a base da prevenção.",
+      "Lesões novas, manchas que mudam de cor ou formato, e feridas que não cicatrizam merecem avaliação profissional. Não espere para procurar ajuda.",
+      "A dermatologia clínica vai muito além da estética: cuida da saúde da pele como um todo, em todas as fases da vida."
+    ],
+    "category": "Dermatologia",
+    "author": "Dr. Bruno Lima",
+    "date": "2025-01-16",
+    "readTime": "3 min"
+  },
+  {
+    "id": "art-3",
+    "slug": "lesoes-por-esforco-como-evitar",
+    "title": "Lesões por esforço: como evitar",
+    "excerpt": "Orientações para treinar com segurança e respeitar os limites do corpo.",
+    "content": [
+      "Lesões por esforço repetitivo afetam atletas e não atletas. O segredo está no equilíbrio entre carga, descanso e técnica.",
+      "Dor persistente não deve ser ignorada. Avaliação precoce evita agravamentos e acelera a recuperação.",
+      "A reabilitação bem feita é tão importante quanto o tratamento. Respeite o tempo do corpo."
+    ],
+    "category": "Ortopedia",
+    "author": "Dra. Carla Mendes",
+    "date": "2025-01-17",
+    "readTime": "4 min"
+  },
+  {
+    "id": "art-4",
+    "slug": "vacinacao-infantil-o-que-mudou",
+    "title": "Vacinação infantil: o que mudou",
+    "excerpt": "Calendário atualizado e dúvidas comuns das famílias.",
+    "content": [
+      "A vacinação é uma das formas mais eficazes de proteção à saúde infantil. O calendário evolui e novas vacinas ampliam a cobertura.",
+      "Dúvidas são normais. O pediatra é o parceiro ideal para esclarecer e construir confiança com a família.",
+      "Manter o caderninho em dia é um ato de cuidado coletivo."
+    ],
+    "category": "Pediatria",
+    "author": "Dra. Diana Rocha",
+    "date": "2025-01-18",
+    "readTime": "3 min"
+  },
+  {
+    "id": "art-5",
+    "slug": "check-up-ginecologico-a-importancia",
+    "title": "Check-up ginecológico: a importância da rotina",
+    "excerpt": "Por que a prevenção anual faz diferença na saúde da mulher.",
+    "content": [
+      "O check-up ginecológico anual é uma ferramenta poderosa de prevenção. Permite identificar alterações precoces e orientar com clareza.",
+      "Cada fase da vida pede abordagens diferentes. Da adolescência à menopausa, o acompanhamento contínuo traz segurança.",
+      "Privacidade e respeito são fundamentais em cada consulta."
+    ],
+    "category": "Ginecologia",
+    "author": "Dr. Eduardo Santos",
+    "date": "2025-01-19",
+    "readTime": "4 min"
+  },
+  {
+    "id": "art-6",
+    "slug": "cuidado-continuo-em-clinica-geral",
+    "title": "Cuidado contínuo em clínica geral",
+    "excerpt": "O papel do clínico geral como coordenador do seu cuidado.",
+    "content": [
+      "O clínico geral é o ponto de partida e o coordenador do cuidado. Conhece seu histórico e conecta especialidades quando preciso.",
+      "Doenças crônicas como hipertensão e diabetes se beneficiam muito de acompanhamento contínuo e próximo.",
+      "Prevenção começa com conversa. Um check-up bem feito vale por muitos tratamentos."
+    ],
+    "category": "Clínica Geral",
+    "author": "Dr. Fernando Costa",
+    "date": "2025-01-20",
+    "readTime": "3 min"
+  },
+  {
+    "id": "art-7",
+    "slug": "saude-e-habitos-uma-visao-integral",
+    "title": "Saúde e hábitos: uma visão integral",
+    "excerpt": "Como sono, alimentação e movimento conversam entre si.",
+    "content": [
+      "Saúde não é um conjunto de partes isoladas. Sono, alimentação, movimento e saúde mental se influenciam mutuamente.",
+      "Pequenos ajustes em um eixo costumam melhorar os outros. O segredo está na consistência, não na perfeição.",
+      "Profissionais de saúde podem ajudar a montar um plano realista, que cabe na sua vida."
+    ],
+    "category": "Bem-estar",
+    "author": "Equipe VivaMais",
+    "date": "2025-01-21",
+    "readTime": "5 min"
+  },
+  {
+    "id": "art-8",
+    "slug": "como-preparar-sua-consulta",
+    "title": "Como preparar sua consulta",
+    "excerpt": "Dicas práticas para aproveitar melhor cada atendimento.",
+    "content": [
+      "Chegar preparado à consulta melhora muito a qualidade do atendimento. Anote sintomas, dúvidas e medicamentos em uso.",
+      "Traga exames anteriores quando possível. O histórico ajuda o profissional a entender o quadro completo.",
+      "Não saia com dúvidas. Perguntar faz parte do cuidado."
+    ],
+    "category": "Bem-estar",
+    "author": "Equipe VivaMais",
+    "date": "2025-01-22",
+    "readTime": "3 min"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "spec-1",
+    "slug": "cardiologia",
+    "name": "Cardiologia",
+    "icon": "M12 21s-6.5-4.35-9-8.5C1 9 3 5 6.5 5c2 0 3.5 1 5.5 3 2-2 3.5-3 5.5-3C21 5 23 9 21 12.5c-2.5 4.15-9 8.5-9 8.5z",
+    "shortDescription": "Saúde do coração e do sistema circulatório.",
+    "longDescription": "A Cardiologia cuida da prevenção, diagnóstico e tratamento de doenças do coração e dos vasos. Na VivaMais, o acompanhamento é contínuo, com foco em qualidade de vida e prevenção de longo prazo.",
+    "whenToSeek": ["Dor no peito", "Falta de ar", "Palpitações", "Pressão alta", "Histórico familiar"],
+    "services": ["Consulta cardiológica", "Eletrocardiograma", "Ecocardiograma", "Mapa 24h", "Holter"],
+    "color": "#0D9488"
+  },
+  {
+    "id": "spec-2",
+    "slug": "dermatologia",
+    "name": "Dermatologia",
+    "icon": "M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z",
+    "shortDescription": "Pele, cabelos e unhas com cuidado humano.",
+    "longDescription": "A Dermatologia trata da saúde da pele, cabelos e unhas em todas as fases da vida. Oferecemos abordagem clínica e estética com responsabilidade, sem promessas vazias.",
+    "whenToSeek": ["Lesões na pele", "Queda de cabelo", "Acne persistente", "Manchas", "Coceira prolongada"],
+    "services": ["Consulta dermatológica", "Avaliação de lesões", "Crioterapia", "Biópsia de pele", "Orientação de rotina"],
+    "color": "#6366F1"
+  },
+  {
+    "id": "spec-3",
+    "slug": "ortopedia",
+    "name": "Ortopedia",
+    "icon": "M13 4a2 2 0 1 1 4 0v8a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V8a2 2 0 1 1 4 0v3",
+    "shortDescription": "Movimento, ossos, articulações e recuperação.",
+    "longDescription": "A Ortopedia cuida da saúde do sistema musculoesquelético. Focamos em diagnóstico preciso, tratamento conservador e reabilitação para devolver movimento com segurança.",
+    "whenToSeek": ["Dor articular", "Lesões por esforço", "Fraturas", "Limitação de movimento", "Pós-operatório"],
+    "services": ["Consulta ortopédica", "Avaliação de fraturas", "Infiltração", "Indicação de fisioterapia", "Acompanhamento pós-cirúrgico"],
+    "color": "#0F766E"
+  },
+  {
+    "id": "spec-4",
+    "slug": "pediatria",
+    "name": "Pediatria",
+    "icon": "M9 11a3 3 0 1 1 6 0a3 3 0 0 1-6 0zm-4 9c0-3.31 2.69-6 6-6h2c3.31 0 6 2.69 6 6",
+    "shortDescription": "Cuidado completo para crianças e adolescentes.",
+    "longDescription": "A Pediatria acompanha o crescimento e desenvolvimento de crianças e adolescentes. Nosso time valoriza escuta, acolhimento e orientação clara para as famílias.",
+    "whenToSeek": ["Febre persistente", "Atraso no desenvolvimento", "Vacinação", "Quadros alérgicos", "Check-up de rotina"],
+    "services": ["Consulta pediátrica", "Puericultura", "Vacinação", "Avaliação do desenvolvimento", "Orientação aos pais"],
+    "color": "#0D9488"
+  },
+  {
+    "id": "spec-5",
+    "slug": "ginecologia",
+    "name": "Ginecologia",
+    "icon": "M12 2a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm-2 13c-2 1-3 3-3 5h10c0-2-1-4-3-5",
+    "shortDescription": "Saúde da mulher em todas as fases.",
+    "longDescription": "A Ginecologia cuida da saúde da mulher com respeito e privacidade. Acompanhamos prevenção, planejamento e bem-estar em cada fase da vida.",
+    "whenToSeek": ["Check-up anual", "Alterações no ciclo", "Planejamento familiar", "Sintomas de menopausa", "Prevenção de câncer"],
+    "services": ["Consulta ginecológica", "Papanicolau", "Ultrassom pélvico", "Planejamento familiar", "Acompanhamento pré-natal"],
+    "color": "#6366F1"
+  },
+  {
+    "id": "spec-6",
+    "slug": "clinica-geral",
+    "name": "Clínica Geral",
+    "icon": "M12 2v20M2 12h20",
+    "shortDescription": "Porta de entrada para o cuidado contínuo.",
+    "longDescription": "A Clínica Geral é o ponto de partida do cuidado. Avaliamos, orientamos e coordenamos encaminhamentos com visão integral da saúde.",
+    "whenToSeek": ["Check-up de rotina", "Sintomas inespecíficos", "Encaminhamentos", "Acompanhamento crônico", "Prevenção"],
+    "services": ["Consulta clínica", "Check-up preventivo", "Acompanhamento crônico", "Encaminhamento", "Receitas e atestados"],
+    "color": "#0F766E"
+  }
+]
