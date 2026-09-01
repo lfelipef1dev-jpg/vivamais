@@ -28,25 +28,27 @@
 
   /* ---------- Dados mockados (embutidos) ---------- */
   var MOCK_APPTS = [
-    { id: 'mock-1', specialtyName: 'Cardiologia', doctorName: 'Dra. Ana Souza', doctorId: 'doc-1', date: '2025-02-10', time: '09:00', status: 'confirmed', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
-    { id: 'mock-2', specialtyName: 'Clínica Geral', doctorName: 'Dr. Fernando Costa', doctorId: 'doc-6', date: '2025-01-15', time: '10:00', status: 'completed', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
-    { id: 'mock-3', specialtyName: 'Dermatologia', doctorName: 'Dr. Bruno Lima', doctorId: 'doc-2', date: '2024-12-20', time: '11:00', status: 'completed', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
-    { id: 'mock-4', specialtyName: 'Ortopedia', doctorName: 'Dra. Carla Mendes', doctorId: 'doc-3', date: '2024-11-05', time: '14:00', status: 'cancelled', insuranceName: 'Bradesco Saúde', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
-    { id: 'mock-5', specialtyName: 'Ginecologia', doctorName: 'Dr. Eduardo Santos', doctorId: 'doc-5', date: '2024-10-12', time: '15:00', status: 'completed', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
-    { id: 'mock-6', specialtyName: 'Pediatria', doctorName: 'Dra. Diana Rocha', doctorId: 'doc-4', date: '2024-09-18', time: '08:00', status: 'completed', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
-    { id: 'mock-7', specialtyName: 'Cardiologia', doctorName: 'Dra. Ana Souza', doctorId: 'doc-1', date: '2024-08-22', time: '09:00', status: 'completed', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
-    { id: 'mock-8', specialtyName: 'Clínica Geral', doctorName: 'Dr. Fernando Costa', doctorId: 'doc-6', date: '2024-07-10', time: '10:00', status: 'completed', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
-    { id: 'mock-9', specialtyName: 'Cardiologia', doctorName: 'Dra. Ana Souza', doctorId: 'doc-1', date: '2025-02-18', time: '10:00', status: 'pending', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'exame', source: 'mock' }
+    { id: 'mock-1', specialtyName: 'Cardiologia', doctorName: 'Dra. Ana Souza', doctorId: 'doc-1', date: '2026-09-03', time: '14:30', status: 'confirmed', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
+    { id: 'mock-2', specialtyName: 'Clínica Geral', doctorName: 'Dr. Fernando Costa', doctorId: 'doc-6', date: '2026-08-26', time: '10:00', status: 'completed', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
+    { id: 'mock-3', specialtyName: 'Dermatologia', doctorName: 'Dr. Bruno Lima', doctorId: 'doc-2', date: '2026-08-19', time: '11:00', status: 'completed', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
+    { id: 'mock-4', specialtyName: 'Ortopedia', doctorName: 'Dra. Carla Mendes', doctorId: 'doc-3', date: '2026-07-15', time: '14:00', status: 'cancelled', insuranceName: 'Bradesco Saúde', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
+    { id: 'mock-5', specialtyName: 'Ginecologia', doctorName: 'Dr. Eduardo Santos', doctorId: 'doc-5', date: '2026-07-08', time: '15:00', status: 'completed', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
+    { id: 'mock-6', specialtyName: 'Pediatria', doctorName: 'Dra. Diana Rocha', doctorId: 'doc-4', date: '2026-06-22', time: '08:00', status: 'completed', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
+    { id: 'mock-7', specialtyName: 'Cardiologia', doctorName: 'Dra. Ana Souza', doctorId: 'doc-1', date: '2026-05-18', time: '09:00', status: 'completed', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
+    { id: 'mock-8', specialtyName: 'Clínica Geral', doctorName: 'Dr. Fernando Costa', doctorId: 'doc-6', date: '2026-04-10', time: '10:00', status: 'completed', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' },
+    { id: 'mock-9', specialtyName: 'Cardiologia', doctorName: 'Dra. Ana Souza', doctorId: 'doc-1', date: '2026-09-10', time: '10:00', status: 'pending', insuranceName: 'Unimed', location: 'Unidade Centro — Demonstração', type: 'exame', source: 'mock' },
+    { id: 'mock-10', specialtyName: 'Dermatologia', doctorName: 'Dr. Bruno Lima', doctorId: 'doc-2', date: '2026-09-17', time: '09:00', status: 'confirmed', insuranceName: 'Amil', location: 'Unidade Centro — Demonstração', type: 'consulta', source: 'mock' }
   ];
 
   var MOCK_DOCS = [
-    { id: 'mdoc-1', type: 'receita', name: 'Receita de medicação — Cardiologia', doctorId: 'doc-1', date: '2025-01-15', status: 'available' },
-    { id: 'mdoc-2', type: 'exame', name: 'Eletrocardiograma — Resultado', doctorId: 'doc-1', date: '2025-01-15', status: 'available' },
-    { id: 'mdoc-3', type: 'laudo', name: 'Laudo de consulta — Clínica Geral', doctorId: 'doc-6', date: '2025-01-15', status: 'available' },
-    { id: 'mdoc-4', type: 'receita', name: 'Receita — Dermatologia', doctorId: 'doc-2', date: '2024-12-20', status: 'available' },
-    { id: 'mdoc-5', type: 'exame', name: 'Ecocardiograma — Resultado', doctorId: 'doc-1', date: '2024-11-05', status: 'available' },
-    { id: 'mdoc-6', type: 'laudo', name: 'Laudo ortopédico', doctorId: 'doc-3', date: '2024-11-05', status: 'pending' },
-    { id: 'mdoc-7', type: 'receita', name: 'Receita — Ginecologia', doctorId: 'doc-5', date: '2024-10-12', status: 'available' }
+    { id: 'mdoc-1', type: 'receita', name: 'Receita de medicação — Cardiologia', doctorId: 'doc-1', date: '2026-08-28', status: 'available' },
+    { id: 'mdoc-2', type: 'exame', name: 'Solicitação de exames — Eletrocardiograma', doctorId: 'doc-1', date: '2026-08-28', status: 'available' },
+    { id: 'mdoc-3', type: 'laudo', name: 'Laudo de consulta — Clínica Geral', doctorId: 'doc-6', date: '2026-08-26', status: 'available' },
+    { id: 'mdoc-4', type: 'receita', name: 'Receita — Dermatologia', doctorId: 'doc-2', date: '2026-08-19', status: 'available' },
+    { id: 'mdoc-5', type: 'exame', name: 'Ecocardiograma — Resultado', doctorId: 'doc-1', date: '2026-05-18', status: 'available' },
+    { id: 'mdoc-6', type: 'laudo', name: 'Laudo ortopédico — Joelho', doctorId: 'doc-3', date: '2026-07-15', status: 'pending' },
+    { id: 'mdoc-7', type: 'receita', name: 'Receita — Ginecologia', doctorId: 'doc-5', date: '2026-07-08', status: 'available' },
+    { id: 'mdoc-8', type: 'exame', name: 'Holter 24h — Resultado', doctorId: 'doc-1', date: '2026-05-20', status: 'available' }
   ];
 
   /* ---------- Sessão ---------- */
@@ -223,7 +225,8 @@
       '  </div>' +
       '</div>' +
       '<div class="portal-next-actions">' +
-      '  <a class="btn btn-ghost" href="agendamento.html">Agendar nova</a>' +
+      '  <button class="btn btn-ghost" type="button" onclick="VivaMais.toast(\'Detalhes da consulta — demonstração\')">Ver detalhes</button>' +
+      '  <a class="btn btn-primary" href="agendamento.html">Remarcar</a>' +
       '</div>';
   }
 
@@ -282,6 +285,7 @@
         '<span class="portal-list-date">' + escapeText(formatDateShort(d.date)) + '</span>' +
         '<span class="portal-list-main">' + escapeText(d.name) + ' <span class="text-muted">' + escapeText(doctorName(d.doctorId)) + '</span></span>' +
         '<span class="badge">' + typeLabel(d.type) + '</span>' +
+        (d.status === 'available' ? ' <button class="btn btn-ghost btn-sm" type="button" onclick="VivaMais.toast(\'Documento demonstrativo — download não disponível\')">Visualizar</button>' : ' <span class="badge badge-status pending">Pendente</span>') +
         '</li>';
     }).join('') + '</ul>';
   }
