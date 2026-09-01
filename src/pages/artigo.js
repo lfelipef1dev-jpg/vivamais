@@ -15,6 +15,15 @@ function renderAll() {
 }
 
 function renderArticle(article, allArticles, doctors, specialties) {
+  /* Mapeia a categoria do artigo para um slug de especialidade (se houver) */
+  var specSlug = '';
+  if (article.category) {
+    var match = specialties.filter(function (s) { return s.name === article.category; })[0];
+    if (match) specSlug = match.slug;
+  }
+  /* Link de agendamento contextualizado quando a categoria é uma especialidade */
+  var bookingHref = specSlug ? ('agendamento.html?specialty=' + specSlug) : 'agendamento.html';
+
   /* ---------- Breadcrumb ---------- */
   const breadcrumb = [
     '<nav class="container breadcrumb" aria-label="Trilha de navegação">',
@@ -52,7 +61,7 @@ function renderArticle(article, allArticles, doctors, specialties) {
     '  <div class="article-cta-box-inner">',
     '    <h3>Agende sua consulta</h3>',
     '    <p>Fale com um especialista e receba orientação personalizada.</p>',
-    '    <a class="btn btn-primary" href="agendamento.html">Agendar agora ' + icons.arrowRight + '</a>',
+    '    <a class="btn btn-primary" href="' + bookingHref + '">Agendar agora ' + icons.arrowRight + '</a>',
     '  </div>',
     '</aside>'
   ].join('\n');
@@ -68,7 +77,7 @@ function renderArticle(article, allArticles, doctors, specialties) {
     '<section class="section-tight">',
     '  <div class="container">',
     '    <div class="article-actions">',
-    '      <a class="btn btn-primary" href="agendamento.html">Agendar consulta</a>',
+    '      <a class="btn btn-primary" href="' + bookingHref + '">Agendar consulta</a>',
     '      <button class="btn btn-ghost" type="button" id="article-share-btn" aria-label="Compartilhar artigo">' + icons.arrowRight + ' Compartilhar</button>',
     '      <button class="btn btn-ghost" type="button" id="article-copy-btn" aria-label="Copiar link do artigo">Copiar link</button>',
     '    </div>',
@@ -110,7 +119,7 @@ function renderAuthorBox(article, doctors, specialties) {
     const specName = getSpecName(specialties, doctor.specialty);
     return [
       '<aside class="article-author-box" aria-label="Sobre o autor">',
-      '  <div class="article-author-photo"><img src="' + doctor.photo + '" alt="Foto de ' + T.escapeAttr(doctor.name) + ' — demonstração" loading="lazy" width="80" height="80"></div>',
+      '  <div class="article-author-photo"><img src="' + doctor.photo + '" alt="Foto profissional de ' + T.escapeAttr(doctor.name) + ', especialista da VivaMais" loading="lazy" width="80" height="80"></div>',
       '  <div class="article-author-body">',
       '    <h3 class="article-author-name">' + T.escapeHtml(doctor.name) + '</h3>',
       '    <p class="article-author-spec">' + T.escapeHtml(specName) + ' · ' + T.escapeHtml(doctor.crm) + '</p>',

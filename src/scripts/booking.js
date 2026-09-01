@@ -149,7 +149,7 @@
         btn.setAttribute('aria-label', 'Selecionar profissional ' + d.name);
         var areas = d.areas.map(function (a) { return '<span class="badge doctor-area-badge">' + escapeText(a) + '</span>'; }).join('');
         btn.innerHTML =
-          '<span class="wizard-doctor-photo" aria-hidden="true"><img src="' + escapeText(d.photo) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"></span>' +
+          '<span class="wizard-doctor-photo" aria-hidden="true"><img src="' + escapeText(d.photo) + '" alt="" loading="lazy" width="72" height="72" onerror="this.style.display=\'none\'"></span>' +
           '<span class="wizard-doctor-body">' +
           '<span class="wizard-doctor-name">' + escapeText(d.name) + '</span>' +
           '<span class="wizard-doctor-crm">' + escapeText(d.crm) + ' · ' + escapeText(d.location) + '</span>' +
@@ -270,7 +270,7 @@
   function fillInsurance() {
     var sel = $('#f-insurance');
     if (!sel) return;
-    var current = sel.value;
+    var current = sel.value || state.patient.insurance || '';
     sel.innerHTML = '<option value="">Selecione...</option>';
     INSURANCE.forEach(function (ins) {
       var opt = document.createElement('option');
@@ -609,6 +609,23 @@
       state.doctor = p.doctor;
       if (!state.specialty) state.specialty = doc.specialty;
     }
+    /* Convênio pré-selecionado via deep link */
+    if (p.insurance && bySlug(INSURANCE, p.insurance)) {
+      state.patient.insurance = p.insurance;
+    }
+    /* Data pré-selecionada (ISO yyyy-mm-dd) via deep link */
+    if (p.date && /^\d{4}-\d{2}-\d{2}$/.test(p.date)) {
+      var parsed = new Date(p.date + 'T00:00:00');
+      if (!isNaN(parsed.getTime()) && !isPast(parsed) && !isWeekend(parsed)) {
+        state.date = p.date;
+        /* Sincroniza o mês do calendário com a data informada */
+        CAL_MONTH = new Date(parsed.getFullYear(), parsed.getMonth(), 1);
+      }
+    }
+    /* Horário pré-selecionado via deep link */
+    if (p.time && ALL_SLOTS.indexOf(p.time) !== -1) {
+      state.time = p.time;
+    }
   }
 
   /* ---------- Ícones ---------- */
@@ -660,11 +677,17 @@
     applyParams();
     bind();
     showPanel(state.step);
-    /* se veio specialty ou doctor, pode pular direto */
-    if (state.specialty && state.doctor) {
+    /* Deep link: pula para a etapa mais avançada possível conforme o contexto recebido */
+    if (state.specialty && state.doctor && state.date && state.time) {
+      /* Especialidade + médico + data + horário → etapa 5 (Dados) */
+      state.step = 5;
+      showPanel(5);
+    } else if (state.specialty && state.doctor) {
+      /* Especialidade + médico → etapa 3 (Data) */
       state.step = 3;
       showPanel(3);
     } else if (state.specialty) {
+      /* Só especialidade → etapa 2 (Profissionais) */
       state.step = 2;
       showPanel(2);
     }

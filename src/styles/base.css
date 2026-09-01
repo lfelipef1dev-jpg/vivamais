@@ -14,10 +14,10 @@
   --text-muted: #64748B;
   --text-soft: #475569;
 
-  /* Brand */
-  --accent: #0D9488;
-  --accent-hover: #0F766E;
-  --accent-soft: rgba(13, 148, 136, 0.10);
+  /* Brand — WCAG AA: #0F766E on #FFF = 5.47:1 (passes 4.5:1) */
+  --accent: #0F766E;
+  --accent-hover: #0A5E58;
+  --accent-soft: rgba(15, 118, 110, 0.10);
   --accent-2: #6366F1;
   --accent-2-hover: #4F46E5;
   --accent-2-soft: rgba(99, 102, 241, 0.10);
@@ -53,7 +53,7 @@
   --navbar-h: 72px;
 
   /* Status */
-  --status-confirmed: #0D9488;
+  --status-confirmed: #0F766E;
   --status-pending: #B45309;
   --status-cancelled: #B91C1C;
   --status-completed: #2563EB;
@@ -80,6 +80,7 @@ body {
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 img, svg, video { display: block; max-width: 100%; height: auto; }
 a { color: var(--accent); text-decoration: none; }
@@ -99,7 +100,7 @@ h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
 h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); }
 h3 { font-size: 1.5rem; }
 h4 { font-size: 1.25rem; }
-p { color: var(--text-soft); }
+p { color: var(--text-soft); overflow-wrap: break-word; }
 strong { color: var(--text); }
 small { font-size: 0.875rem; }
 
@@ -129,6 +130,30 @@ small { font-size: 0.875rem; }
   white-space: nowrap; border: 0;
 }
 
+/* Form elements: restore focus-visible outline (overrides :focus { outline: none }) */
+.input:focus-visible, .select:focus-visible, .textarea:focus-visible,
+.search-overlay-input:focus-visible, .search-input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* VivaMais signature: subtle accent top-border on featured cards (no layout shift) */
+.card-hover { position: relative; }
+.card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur) var(--ease);
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.card-hover:hover::before { transform: scaleX(1); }
+
 /* ---------- Motion ---------- */
 
 /* Button press effect */
@@ -148,11 +173,6 @@ small { font-size: 0.875rem; }
 @keyframes focus-ring-pulse {
   0% { box-shadow: 0 0 0 0 var(--accent-soft); }
   100% { box-shadow: 0 0 0 6px transparent; }
-}
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-  border-radius: 4px;
 }
 
 /* Toast slide-in */

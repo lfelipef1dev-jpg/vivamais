@@ -112,9 +112,9 @@ function renderPage() {
 
   /* ---------- Estrutura (galeria) ---------- */
   const galleryImgs = [
-    { src: 'img-recepcao.jpg', alt: 'Recepção da clínica — ambiente acolhedor (demonstração)' },
-    { src: 'img-exame.jpg', alt: 'Sala de exames equipada (demonstração)' },
-    { src: 'img-cardio.jpg', alt: 'Sala de cardiologia (demonstração)' }
+    { src: 'img-recepcao.jpg', alt: 'Recepção moderna da clínica VivaMais com balcão de atendimento e sala de espera iluminada' },
+    { src: 'img-exame.jpg', alt: 'Sala de consulta limpa e contemporânea com equipamentos médicos modernos' },
+    { src: 'img-cardio.jpg', alt: 'Consulta cardiológica com médico e paciente em ambiente acolhedor' }
   ];
   const galleryHtml = galleryImgs.map(function (g) {
     return '<figure class="gallery-item"><img src="' + g.src + '" alt="' + T.escapeAttr(g.alt) + '" loading="lazy" width="400" height="300"></figure>';
@@ -139,7 +139,7 @@ function renderPage() {
     return [
       '<article class="card card-hover doctor-card">',
       '  <a class="doctor-card-link" href="medico-' + d.slug + '.html" aria-label="Ver perfil de ' + T.escapeAttr(d.name) + '">',
-      '    <div class="doctor-photo"><img src="' + d.photo + '" alt="Foto de ' + T.escapeAttr(d.name) + ' — demonstração" loading="lazy" width="120" height="120"></div>',
+      '    <div class="doctor-photo"><img src="' + d.photo + '" alt="Foto profissional de ' + T.escapeAttr(d.name) + ', especialista da VivaMais" loading="lazy" width="120" height="120"></div>',
       '    <h3 class="card-title doctor-name">' + T.escapeHtml(d.name) + '</h3>',
       '    <p class="doctor-spec">' + T.escapeHtml(specName) + '</p>',
       '    <span class="doctor-more">Ver perfil ' + icons.arrowRight + '</span>',

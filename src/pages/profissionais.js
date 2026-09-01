@@ -76,7 +76,7 @@ function renderPage() {
     return [
       '<article class="card card-hover doctor-card-lg" data-spec="' + d.specialty + '" data-insurance="' + insSlugs + '" data-name="' + T.escapeAttr(d.name.toLowerCase()) + '">',
       '  <a class="doctor-card-lg-link" href="medico-' + d.slug + '.html" aria-label="Ver perfil de ' + T.escapeAttr(d.name) + '">',
-      '    <div class="doctor-photo-lg"><img src="' + d.photo + '" alt="Foto de ' + T.escapeAttr(d.name) + ' — demonstração" loading="lazy" width="160" height="160"></div>',
+      '    <div class="doctor-photo-lg"><img src="' + d.photo + '" alt="Foto profissional de ' + T.escapeAttr(d.name) + ', especialista da VivaMais" loading="lazy" width="160" height="160"></div>',
       '    <div class="doctor-card-lg-body">',
       '      <h3 class="doctor-card-lg-name">' + T.escapeHtml(d.name) + '</h3>',
       '      <p class="doctor-card-lg-spec">' + T.escapeHtml(specName) + '</p>',

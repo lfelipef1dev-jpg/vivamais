@@ -51,7 +51,7 @@ function renderPage() {
   const cards = insurance.map(function (i) {
     const isParticular = i.slug === 'particular';
     const specList = i.specialties.map(function (s) {
-      return '<li class="insurance-spec-item">' + icons.check + '<span>' + T.escapeHtml(specName(s)) + '</span></li>';
+      return '<li class="insurance-spec-item">' + icons.check + '<a href="agendamento.html?specialty=' + T.escapeAttr(s) + '&insurance=' + T.escapeAttr(i.slug) + '">' + T.escapeHtml(specName(s)) + '</a></li>';
     }).join('');
     return [
       '<article class="card card-hover insurance-card" data-name="' + T.escapeAttr(i.name.toLowerCase()) + '">',

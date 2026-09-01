@@ -96,7 +96,7 @@ function renderFor(slug) {
       return [
         '<article class="card card-hover doctor-card-lg">',
         '  <a class="doctor-card-lg-link" href="medico-' + d.slug + '.html" aria-label="Ver perfil de ' + T.escapeAttr(d.name) + '">',
-        '    <div class="doctor-photo-lg"><img src="' + d.photo + '" alt="Foto de ' + T.escapeAttr(d.name) + ' — demonstração" loading="lazy" width="160" height="160"></div>',
+        '    <div class="doctor-photo-lg"><img src="' + d.photo + '" alt="Foto profissional de ' + T.escapeAttr(d.name) + ', especialista da VivaMais" loading="lazy" width="160" height="160"></div>',
         '    <div class="doctor-card-lg-body">',
         '      <h3 class="doctor-card-lg-name">' + T.escapeHtml(d.name) + '</h3>',
         '      <p class="doctor-card-lg-crm text-muted">' + T.escapeHtml(d.crm) + '</p>',
@@ -147,7 +147,7 @@ function renderFor(slug) {
       const free = available && (t === '08:00' || t === '09:00' || t === '14:00' || t === '15:00');
       const cls = 'schedule-slot' + (free ? ' schedule-slot-free' : ' schedule-slot-busy');
       const state = free ? 'Disponível' : 'Indisponível';
-      return '<button class="' + cls + '" type="button" data-day="' + day.key + '" data-time="' + t + '" ' + (free ? '' : 'disabled') + ' aria-label="' + day.label + ' ' + t + ' — ' + state + '">' + t + '</button>';
+      return '<button class="' + cls + '" type="button" data-day="' + day.key + '" data-time="' + t + '" data-specialty="' + spec.slug + '" ' + (free ? '' : 'disabled') + ' aria-label="' + day.label + ' ' + t + ' — ' + state + '">' + t + '</button>';
     }).join('');
     return [
       '<div class="schedule-day" data-day="' + day.key + '">',
@@ -256,7 +256,7 @@ function buildFaq(specName) {
     },
     {
       q: 'O atendimento é presencial ou online?',
-      a: 'Oferecemos atendimento presencial. Algumas especialidades podem ter opções de telemedicina — confirme ao agendar.'
+      a: 'Oferecemos atendimento presencial em nossa unidade. O agendamento é feito totalmente online pela plataforma.'
     }
   ];
 }

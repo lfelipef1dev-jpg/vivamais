@@ -36,7 +36,7 @@ function renderHome() {
     '    </div>',
     '    <div class="hero-visual-wrap">',
     '      <div class="hero-visual">',
-    '        <img src="img-hero.jpg" alt="Profissional de saúde atendendo paciente com cuidado — demonstração" loading="eager" fetchpriority="high" width="800" height="600">',
+    '        <img src="img-hero.jpg" alt="Médica conversando com paciente em consulta — ambiente claro e acolhedor da clínica VivaMais" loading="eager" fetchpriority="high" width="800" height="600">',
     '      </div>',
     '    </div>',
     '  </div>',
@@ -104,7 +104,7 @@ function renderHome() {
     return [
       '<article class="card card-hover doctor-card">',
       '  <a class="doctor-card-link" href="medico-' + d.slug + '.html" aria-label="Ver perfil de ' + T.escapeAttr(d.name) + '">',
-      '    <div class="doctor-photo"><img src="' + d.photo + '" alt="Foto de ' + T.escapeAttr(d.name) + ' — demonstração" loading="lazy" width="120" height="120"></div>',
+      '    <div class="doctor-photo"><img src="' + d.photo + '" alt="Foto profissional de ' + T.escapeAttr(d.name) + ', especialista da VivaMais" loading="lazy" width="120" height="120"></div>',
       '    <h3 class="card-title doctor-name">' + T.escapeHtml(d.name) + '</h3>',
       '    <p class="doctor-spec">' + T.escapeHtml(specName) + '</p>',
       '    <p class="doctor-crm text-muted">' + T.escapeHtml(d.crm) + '</p>',
@@ -134,7 +134,7 @@ function renderHome() {
   const steps = [
     { t: 'Escolha a especialidade', d: 'Selecione a área de cuidado que você precisa.' },
     { t: 'Selecione o profissional', d: 'Conheça a equipe e escolha quem atende você.' },
-    { t: 'Escolha a data', d: 'Veja os dias disponíveis e pick o melhor.' },
+    { t: 'Escolha a data', d: 'Veja os dias disponíveis e escolha o melhor.' },
     { t: 'Escolha o horário', d: 'Selecione o horário que cabe na sua rotina.' },
     { t: 'Confirme seus dados', d: 'Revise e confirme o agendamento em segundos.' }
   ];
@@ -189,9 +189,9 @@ function renderHome() {
 
   /* ---------- G. Estrutura (preview) ---------- */
   const galleryImgs = [
-    { src: 'img-recepcao.jpg', alt: 'Recepção da clínica — ambiente acolhedor (demonstração)' },
-    { src: 'img-exame.jpg', alt: 'Sala de exames equipada (demonstração)' },
-    { src: 'img-cardio.jpg', alt: 'Sala de cardiologia (demonstração)' }
+    { src: 'img-recepcao.jpg', alt: 'Recepção moderna da clínica VivaMais com balcão de atendimento e sala de espera iluminada' },
+    { src: 'img-exame.jpg', alt: 'Sala de consulta limpa e contemporânea com equipamentos médicos modernos' },
+    { src: 'img-cardio.jpg', alt: 'Consulta cardiológica com médico e paciente em ambiente acolhedor' }
   ];
   const galleryHtml = galleryImgs.map(function (g) {
     return '<figure class="gallery-item"><img src="' + g.src + '" alt="' + T.escapeAttr(g.alt) + '" loading="lazy" width="400" height="300"></figure>';
@@ -246,7 +246,7 @@ function renderHome() {
     { q: 'Quais convênios são atendidos?', a: 'Atendemos os principais convênios da região. Confira a lista completa na página de Convênios.' },
     { q: 'Preciso de encaminhamento para marcar consulta?', a: 'Na maioria das especialidades não é necessário encaminhamento. Para alguns exames específicos, pode ser solicitado.' },
     { q: 'Posso remarcar ou cancelar meu agendamento?', a: 'Sim. Acesse a Área do paciente para remarcar ou cancelar com facilidade.' },
-    { q: 'O atendimento é presencial ou online?', a: 'Oferecemos atendimento presencial. Algumas especialidades podem ter opções de telemedicina — confirme ao agendar.' }
+    { q: 'O atendimento é presencial ou online?', a: 'Oferecemos atendimento presencial em nossa unidade. O agendamento é feito totalmente online pela plataforma.' }
   ];
   const faqHtml = faqs.map(function (f) {
     return [

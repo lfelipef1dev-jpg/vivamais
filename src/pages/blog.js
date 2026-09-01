@@ -28,7 +28,7 @@ function renderPage() {
   ].join('\n');
 
   /* ---------- Filtros por categoria ---------- */
-  const categories = ['Todos', 'Cardiologia', 'Pediatria', 'Ortopedia', 'Nutrição', 'Ginecologia', 'Bem-estar'];
+  const categories = ['Todos', 'Cardiologia', 'Dermatologia', 'Ortopedia', 'Pediatria', 'Ginecologia', 'Clínica Geral', 'Bem-estar'];
   const chipsHtml = categories.map(function (c, i) {
     const active = i === 0 ? ' active' : '';
     return '<button class="chip blog-filter-chip' + active + '" type="button" data-category="' + T.escapeAttr(c) + '">' + T.escapeHtml(c) + '</button>';

@@ -13,7 +13,7 @@
 .admin-login-card-head { text-align: center; margin-bottom: var(--space-5); }
 .admin-login-icon {
   width: 56px; height: 56px;
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   background: linear-gradient(135deg, var(--accent), var(--accent-hover));
   color: #fff;
   display: inline-grid; place-items: center;
@@ -263,7 +263,7 @@
 .admin-crm { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.8rem; color: var(--text-soft); }
 .admin-row-actions { display: flex; gap: var(--space-2); align-items: center; flex-wrap: wrap; }
 .admin-action-btn {
-  min-height: 36px;
+  min-height: 40px;
   padding: 6px 12px;
   border-radius: var(--radius-pill);
   background: var(--surface);
@@ -275,7 +275,7 @@
 }
 .admin-action-btn:hover { background: var(--accent-soft); color: var(--accent); }
 .admin-status-select { display: inline-flex; }
-.admin-status-select .select { min-height: 36px; padding: 6px 10px; font-size: 0.8rem; width: auto; }
+.admin-status-select .select { min-height: 40px; padding: 6px 10px; font-size: 0.8rem; width: auto; }
 
 /* ---------- Badges de status (agenda) ---------- */
 .admin-legend-dot, .admin-legend-item .admin-legend-dot { display: inline-block; }
@@ -325,7 +325,7 @@
 /* ---------- Paginação ---------- */
 .admin-pagination { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-4); justify-content: center; }
 .admin-page-btn {
-  min-width: 40px; min-height: 40px;
+  min-width: 44px; min-height: 44px;
   padding: 8px 12px;
   border-radius: var(--radius-sm);
   background: var(--bg-alt);
@@ -351,7 +351,7 @@
 }
 .admin-agenda-tabs { margin-bottom: 0; }
 .admin-agenda-nav { display: flex; align-items: center; gap: var(--space-2); }
-.admin-agenda-nav-btn { min-height: 40px; min-width: 40px; padding: 8px; }
+.admin-agenda-nav-btn { min-height: 44px; min-width: 44px; padding: 8px; }
 .admin-agenda-nav-btn .icon { width: 18px; height: 18px; }
 .admin-agenda-period { font-weight: 600; font-size: 0.9rem; color: var(--text); min-width: 160px; text-align: center; }
 
@@ -489,4 +489,13 @@
   .admin-panel-head h2 { font-size: 1.25rem; }
   .admin-filters { padding: var(--space-3); }
   .admin-detail-row { grid-template-columns: 1fr; gap: 2px; }
+  .admin-cal-day { min-height: 48px; padding: 6px; }
+  .admin-cal-num { font-size: 0.78rem; }
+  .admin-cal-head, .admin-cal-grid { gap: 4px; }
+  .admin-bars-chart { gap: var(--space-2); }
+  .admin-bar-item { min-width: 40px; }
+}
+@media (max-width: 400px) {
+  .admin-cal-day { min-height: 40px; padding: 4px; }
+  .admin-cal-weekday { font-size: 0.65rem; padding: 4px 0; }
 }

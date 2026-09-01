@@ -37,7 +37,7 @@ function renderFor(slug) {
     '  <div class="container">',
     '    <div class="doctor-hero">',
     '      <div class="doctor-hero-photo">',
-    '        <img src="' + doc.photo + '" alt="Foto de ' + T.escapeAttr(doc.name) + ' — demonstração" loading="eager" width="200" height="200">',
+    '        <img src="' + doc.photo + '" alt="Foto profissional de ' + T.escapeAttr(doc.name) + ', especialista da VivaMais" loading="eager" width="200" height="200">',
     '      </div>',
     '      <div class="doctor-hero-info">',
     '        <p class="eyebrow">' + T.escapeHtml(specName) + '</p>',
@@ -167,7 +167,7 @@ function renderFor(slug) {
       const free = daySlots.indexOf(t) !== -1;
       const cls = 'schedule-slot' + (free ? ' schedule-slot-free' : ' schedule-slot-busy');
       const state = free ? 'Disponível' : 'Indisponível';
-      return '<button class="' + cls + '" type="button" data-day="' + day.key + '" data-time="' + t + '" data-doctor="' + doc.slug + '" ' + (free ? '' : 'disabled') + ' aria-label="' + day.label + ' ' + t + ' — ' + state + '">' + t + '</button>';
+      return '<button class="' + cls + '" type="button" data-day="' + day.key + '" data-time="' + t + '" data-doctor="' + doc.slug + '" data-specialty="' + doc.specialty + '" ' + (free ? '' : 'disabled') + ' aria-label="' + day.label + ' ' + t + ' — ' + state + '">' + t + '</button>';
     }).join('');
     return [
       '<div class="schedule-day" data-day="' + day.key + '">',
@@ -199,7 +199,7 @@ function renderFor(slug) {
     '      <h2>Agendar com ' + T.escapeHtml(doc.name) + '</h2>',
     '      <p>Marque sua consulta de ' + T.escapeHtml(specName) + ' em poucos cliques.</p>',
     '      <div class="cta-final-actions">',
-    '        <a class="btn btn-primary" href="agendamento.html?doctor=' + doc.slug + '">Agendar consulta</a>',
+    '        <a class="btn btn-primary" href="agendamento.html?specialty=' + doc.specialty + '&doctor=' + doc.slug + '">Agendar consulta</a>',
     '        <a class="btn btn-ghost" href="profissionais.html">Ver outros profissionais ' + icons.arrowRight + '</a>',
     '      </div>',
     '    </div>',

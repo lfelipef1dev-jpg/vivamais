@@ -129,11 +129,32 @@
 
   /* =========================================================
      4. Calendário de horários — selecionar slot
+     Converte dia-da-semana (seg/ter/...) em data ISO real
+     (próxima ocorrência desse dia útil) e monta deep link
+     contextualizado para o agendamento.
      ========================================================= */
   (function schedule() {
     var grid = $('#schedule-grid');
     if (!grid) return;
     var slots = $all('.schedule-slot-free', grid);
+
+    /* Mapa dia-da-semana → índice JS (0=Dom .. 6=Sáb) */
+    var DAY_MAP = { dom: 0, seg: 1, ter: 2, qua: 3, qui: 4, sex: 5, sab: 6 };
+
+    function pad2(n) { return String(n).padStart(2, '0'); }
+    function toIso(d) {
+      return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+    }
+    /* Próxima ocorrência (a partir de amanhã) do dia-da-semana informado */
+    function nextDateForDay(dayKey) {
+      var target = DAY_MAP[dayKey];
+      if (target == null) return null;
+      var d = new Date();
+      d.setHours(0, 0, 0, 0);
+      d.setDate(d.getDate() + 1); /* começa amanhã */
+      while (d.getDay() !== target) d.setDate(d.getDate() + 1);
+      return d;
+    }
 
     slots.forEach(function (slot) {
       slot.addEventListener('click', function () {
@@ -143,14 +164,19 @@
         var day = slot.getAttribute('data-day');
         var time = slot.getAttribute('data-time');
         var doctor = slot.getAttribute('data-doctor');
+        var specialty = slot.getAttribute('data-specialty');
+        var dateObj = nextDateForDay(day);
+        var dateIso = dateObj ? toIso(dateObj) : '';
         var base = 'agendamento.html';
         var params = [];
+        if (specialty) params.push('specialty=' + encodeURIComponent(specialty));
         if (doctor) params.push('doctor=' + encodeURIComponent(doctor));
-        if (day) params.push('day=' + encodeURIComponent(day));
+        if (dateIso) params.push('date=' + encodeURIComponent(dateIso));
         if (time) params.push('time=' + encodeURIComponent(time));
         var url = base + (params.length ? '?' + params.join('&') : '');
-        if (window.toast && typeof window.toast.show === 'function') {
-          window.toast.show('Horário ' + time + ' selecionado. Redirecionando...');
+        var vm = window.VivaMais;
+        if (vm && typeof vm.toast === 'function') {
+          vm.toast('Horário ' + time + ' selecionado. Redirecionando...');
         }
         setTimeout(function () { window.location.href = url; }, 600);
       });
