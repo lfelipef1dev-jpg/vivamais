@@ -50,6 +50,11 @@ function copyAssets() {
   if (fs.existsSync(path.join(ROOT, 'favicon.svg'))) {
     copyFile(path.join(ROOT, 'favicon.svg'), path.join(OUT, 'favicon.svg'));
   }
+  // brand assets
+  const brandDir = path.join(ROOT, 'brand');
+  if (fs.existsSync(brandDir)) {
+    copyDir(brandDir, path.join(OUT, 'brand'));
+  }
 }
 
 /* ---------- Sitemap & robots ---------- */
