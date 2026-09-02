@@ -33,7 +33,7 @@ const icons = {
 
 /* ---------- Head ---------- */
 const BASE_URL = 'https://vivamais.expostacker.com.br';
-const DEFAULT_OG_IMAGE = BASE_URL + '/img-hero.jpg';
+const DEFAULT_OG_IMAGE = BASE_URL + '/og-image.png';
 
 function renderHead(pageTitle, metaDescription, options) {
   options = options || {};
@@ -92,8 +92,8 @@ function renderHead(pageTitle, metaDescription, options) {
     '  <meta name="twitter:description" content="' + escapeAttr(desc) + '">',
     '  <meta name="twitter:image" content="' + escapeAttr(ogImage) + '">',
     '  <meta name="theme-color" content="#0D9488">',
-    '  <link rel="icon" type="image/svg+xml" href="' + (options.root || '') + 'favicon.svg">',
-    '  <link rel="apple-touch-icon" href="' + (options.root || '') + 'favicon.svg">',
+    '  <link rel="icon" type="image/png" href="' + (options.root || '') + 'favicon.png" sizes="1254x1254">',
+    '  <link rel="apple-touch-icon" href="' + (options.root || '') + 'favicon.png">',
     '  <link rel="preconnect" href="https://fonts.googleapis.com">',
     '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
     '  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">',
@@ -130,8 +130,7 @@ function renderNavbar(root, active) {
     '<header class="navbar" id="navbar" role="banner">',
     '  <div class="container navbar-inner">',
     '    <a class="nav-brand" href="' + root + 'index.html" aria-label="' + escapeAttr(clinic.name) + ' — página inicial">',
-    '      <span class="nav-brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4 9 14l-2-4"/><path d="M18 12h4"/></svg></span>',
-    '      <span class="nav-brand-text">Viva<span class="nav-brand-plus">Mais</span></span>',
+    '      <img src="' + root + 'brand/vivamais-logo.png" alt="VivaMais" width="160" height="107" class="nav-brand-logo" />',
     '      <span class="badge badge-demo nav-demo-badge">Demo</span>',
     '    </a>',
     '    <nav class="nav-links" id="nav-links" aria-label="Navegação principal">',
@@ -178,8 +177,7 @@ function renderFooter(root) {
     '  <div class="container footer-grid">',
     '    <div class="footer-col footer-col-about">',
     '      <a class="nav-brand" href="' + root + 'index.html" aria-label="' + escapeAttr(clinic.name) + ' — página inicial">',
-    '        <span class="nav-brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4 9 14l-2-4"/><path d="M18 12h4"/></svg></span>',
-    '        <span class="nav-brand-text">Viva<span class="nav-brand-plus">Mais</span></span>',
+    '        <img src="' + root + 'brand/vivamais-logo.png" alt="VivaMais" width="150" height="100" class="nav-brand-logo nav-brand-logo-footer" />',
     '      </a>',
     '      <p class="text-muted footer-about-text">' + escapeHtml(clinic.tagline) + ' Plataforma digital para saúde integrada, com atendimento humanizado e experiência simples do agendamento ao acompanhamento.</p>',
     '      <span class="badge badge-demo">' + icons.shield + ' Ambiente demonstrativo — dados fictícios</span>',
@@ -308,7 +306,7 @@ function buildOrganization() {
     '@type': 'Organization',
     name: clinic.name,
     url: BASE_URL + '/',
-    logo: BASE_URL + '/favicon.svg',
+    logo: BASE_URL + '/brand/vivamais-logo.png',
     telephone: clinic.phone,
     email: clinic.email,
     sameAs: [
@@ -380,7 +378,7 @@ function buildArticle(article) {
     publisher: {
       '@type': 'Organization',
       name: clinic.name,
-      logo: { '@type': 'ImageObject', url: BASE_URL + '/favicon.svg' }
+      logo: { '@type': 'ImageObject', url: BASE_URL + '/brand/vivamais-logo.png' }
     },
     mainEntityOfPage: BASE_URL + '/artigo-' + article.slug + '.html'
   };
