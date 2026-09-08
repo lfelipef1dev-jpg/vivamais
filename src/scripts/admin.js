@@ -733,7 +733,7 @@
       '    <div class="field"><label class="label" for="d-specialty">Especialidade</label><select class="select" id="d-specialty" name="specialty">' + specOpts + '</select></div>',
       '    <div class="field"><label class="label" for="d-crm">CRM (demo)</label><input class="input" id="d-crm" name="crm" type="text" value="' + esc(d.crm) + '"></div>',
       '    <div class="field"><label class="label" for="d-rqe">RQE (demo)</label><input class="input" id="d-rqe" name="rqe" type="text" value="' + esc(d.rqe || '') + '"></div>',
-      '    <div class="field"><label class="label" for="d-photo">Foto (URL)</label><input class="input" id="d-photo" name="photo" type="text" value="' + esc(d.photo || '') + '" placeholder="pessoa1.jpg"></div>',
+      '    <div class="field"><label class="label" for="d-photo">Foto (URL)</label><input class="input" id="d-photo" name="photo" type="text" value="' + esc(d.photo || '') + '" placeholder="pessoa1.webp"></div>',
       '  </div>',
       '  <div class="field"><label class="label" for="d-bio">Descrição</label><textarea class="textarea" id="d-bio" name="bio">' + esc(d.bio || '') + '</textarea></div>',
       '  <div class="field"><span class="label">Convênios aceitos</span><div class="admin-checks">' + insOpts + '</div></div>',

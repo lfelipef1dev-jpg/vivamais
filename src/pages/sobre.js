@@ -112,9 +112,9 @@ function renderPage() {
 
   /* ---------- Estrutura (galeria) ---------- */
   const galleryImgs = [
-    { src: 'img-recepcao.jpg', alt: 'Recepção moderna da clínica VivaMais com balcão de atendimento e sala de espera iluminada' },
-    { src: 'img-exame.jpg', alt: 'Sala de consulta limpa e contemporânea com equipamentos médicos modernos' },
-    { src: 'img-cardio.jpg', alt: 'Consulta cardiológica com médico e paciente em ambiente acolhedor' }
+    { src: 'img-recepcao.webp', alt: 'Recepção moderna da clínica VivaMais com balcão de atendimento e sala de espera iluminada' },
+    { src: 'img-exame.webp', alt: 'Sala de consulta limpa e contemporânea com equipamentos médicos modernos' },
+    { src: 'img-cardio.webp', alt: 'Consulta cardiológica com médico e paciente em ambiente acolhedor' }
   ];
   const galleryHtml = galleryImgs.map(function (g) {
     return '<figure class="gallery-item"><img src="' + g.src + '" alt="' + T.escapeAttr(g.alt) + '" loading="lazy" width="400" height="300"></figure>';

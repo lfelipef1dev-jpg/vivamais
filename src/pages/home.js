@@ -36,7 +36,7 @@ function renderHome() {
     '    </div>',
     '    <div class="hero-visual-wrap">',
     '      <div class="hero-visual">',
-    '        <img src="img-hero.jpg" alt="Médica conversando com paciente em consulta — ambiente claro e acolhedor da clínica VivaMais" loading="eager" fetchpriority="high" width="800" height="600">',
+    '        <img src="img-hero.webp" alt="Médica conversando com paciente em consulta — ambiente claro e acolhedor da clínica VivaMais" loading="eager" fetchpriority="high" width="800" height="450" decoding="async">',
     '      </div>',
     '    </div>',
     '  </div>',
@@ -189,9 +189,9 @@ function renderHome() {
 
   /* ---------- G. Estrutura (preview) ---------- */
   const galleryImgs = [
-    { src: 'img-recepcao.jpg', alt: 'Recepção moderna da clínica VivaMais com balcão de atendimento e sala de espera iluminada' },
-    { src: 'img-exame.jpg', alt: 'Sala de consulta limpa e contemporânea com equipamentos médicos modernos' },
-    { src: 'img-cardio.jpg', alt: 'Consulta cardiológica com médico e paciente em ambiente acolhedor' }
+    { src: 'img-recepcao.webp', alt: 'Recepção moderna da clínica VivaMais com balcão de atendimento e sala de espera iluminada' },
+    { src: 'img-exame.webp', alt: 'Sala de consulta limpa e contemporânea com equipamentos médicos modernos' },
+    { src: 'img-cardio.webp', alt: 'Consulta cardiológica com médico e paciente em ambiente acolhedor' }
   ];
   const galleryHtml = galleryImgs.map(function (g) {
     return '<figure class="gallery-item"><img src="' + g.src + '" alt="' + T.escapeAttr(g.alt) + '" loading="lazy" width="400" height="300"></figure>';

@@ -90,6 +90,7 @@ function renderHead(pageTitle, metaDescription, options) {
     '  <meta name="theme-color" content="#0D9488">',
     '  <link rel="icon" type="image/png" href="' + (options.root || '') + 'favicon.png" sizes="180x180">',
     '  <link rel="apple-touch-icon" href="' + (options.root || '') + 'favicon.png">',
+    '  <link rel="preload" as="font" type="font/woff2" href="' + (options.root || '') + 'fonts/inter-400-latin.woff2" crossorigin>',
     '  ' + cssTags
   ];
   if (jsonLdBlocks) {

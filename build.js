@@ -9,6 +9,8 @@
 
 const fs = require('fs');
 const path = require('path');
+const CleanCSS = require('clean-css');
+const Terser = require('terser');
 
 const ROOT = __dirname;
 const OUT = path.join(ROOT, 'out');
@@ -35,14 +37,50 @@ function writeOut(rel, content) {
   fs.writeFileSync(dest, content);
 }
 
+function copyMinifiedCss(src, dest) {
+  ensureDir(dest);
+  const cc = new CleanCSS({ level: 2 });
+  fs.readdirSync(src, { withFileTypes: true }).forEach(function (entry) {
+    const s = path.join(src, entry.name);
+    const d = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      copyMinifiedCss(s, d);
+    } else if (/\.css$/i.test(entry.name)) {
+      const input = fs.readFileSync(s, 'utf8');
+      const out = cc.minify(input);
+      fs.writeFileSync(d, out.styles);
+    } else {
+      copyFile(s, d);
+    }
+  });
+}
+
+async function copyMinifiedJs(src, dest) {
+  ensureDir(dest);
+  const files = fs.readdirSync(src, { withFileTypes: true });
+  for (const entry of files) {
+    const s = path.join(src, entry.name);
+    const d = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      await copyMinifiedJs(s, d);
+    } else if (/\.js$/i.test(entry.name)) {
+      const input = fs.readFileSync(s, 'utf8');
+      const out = await Terser.minify(input, { format: { comments: false } });
+      fs.writeFileSync(d, out.code || input);
+    } else {
+      copyFile(s, d);
+    }
+  }
+}
+
 /* ---------- Assets ---------- */
-function copyAssets() {
-  // CSS
-  copyDir(path.join(SRC, 'styles'), path.join(OUT, 'styles'));
+async function copyAssets() {
+  // CSS (minificado)
+  copyMinifiedCss(path.join(SRC, 'styles'), path.join(OUT, 'styles'));
   // Fonts
   copyDir(path.join(SRC, 'fonts'), path.join(OUT, 'fonts'));
-  // JS
-  copyDir(path.join(SRC, 'scripts'), path.join(OUT, 'scripts'));
+  // JS (minificado)
+  await copyMinifiedJs(path.join(SRC, 'scripts'), path.join(OUT, 'scripts'));
   // Imagens existentes na raiz
   const imgExts = /\.(jpg|jpeg|png|svg|webp|gif|ico)$/i;
   fs.readdirSync(ROOT).forEach(function (name) {
@@ -97,7 +135,7 @@ function generateRobots() {
 }
 
 /* ---------- Build ---------- */
-function build() {
+async function build() {
   const t0 = Date.now();
   console.log('VivaMais — build iniciado');
 
@@ -108,7 +146,7 @@ function build() {
   ensureDir(OUT);
 
   // Copia assets
-  copyAssets();
+  await copyAssets();
   console.log('  ✓ assets copiados (CSS, JS, imagens)');
 
   // Páginas geradas
@@ -259,4 +297,7 @@ function countFiles(dir) {
   return n;
 }
 
-build();
+build().catch(function (e) {
+  console.error('Build falhou:', e);
+  process.exit(1);
+});

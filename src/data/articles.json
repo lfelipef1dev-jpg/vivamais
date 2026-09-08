@@ -13,7 +13,7 @@
     "author": "Dra. Ana Souza",
     "date": "2026-07-15",
     "readTime": "4 min",
-    "image": "blog-cardio.jpg"
+    "image": "blog-cardio.webp"
   },
   {
     "id": "art-2",
@@ -29,7 +29,7 @@
     "author": "Dr. Bruno Lima",
     "date": "2026-07-28",
     "readTime": "3 min",
-    "image": "blog-derma.jpg"
+    "image": "blog-derma.webp"
   },
   {
     "id": "art-3",
@@ -45,7 +45,7 @@
     "author": "Dra. Carla Mendes",
     "date": "2026-08-05",
     "readTime": "4 min",
-    "image": "blog-orto.jpg"
+    "image": "blog-orto.webp"
   },
   {
     "id": "art-4",
@@ -61,7 +61,7 @@
     "author": "Dra. Diana Rocha",
     "date": "2026-08-12",
     "readTime": "3 min",
-    "image": "blog-pedi.jpg"
+    "image": "blog-pedi.webp"
   },
   {
     "id": "art-5",
@@ -77,7 +77,7 @@
     "author": "Dr. Eduardo Santos",
     "date": "2026-08-19",
     "readTime": "4 min",
-    "image": "blog-gine.jpg"
+    "image": "blog-gine.webp"
   },
   {
     "id": "art-6",
@@ -93,7 +93,7 @@
     "author": "Dr. Fernando Costa",
     "date": "2026-08-26",
     "readTime": "3 min",
-    "image": "blog-geral.jpg"
+    "image": "blog-geral.webp"
   },
   {
     "id": "art-7",
@@ -109,7 +109,7 @@
     "author": "Equipe VivaMais",
     "date": "2026-09-02",
     "readTime": "5 min",
-    "image": "blog-bem.jpg"
+    "image": "blog-bem.webp"
   },
   {
     "id": "art-8",
@@ -125,6 +125,6 @@
     "author": "Equipe VivaMais",
     "date": "2026-09-09",
     "readTime": "3 min",
-    "image": "blog-bem.jpg"
+    "image": "blog-bem.webp"
   }
 ]
