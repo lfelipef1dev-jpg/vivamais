@@ -311,7 +311,7 @@
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   background: var(--surface);
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
 }
 .hero-visual img { width: 100%; height: 100%; object-fit: cover; }
 .hero-schedule-head {

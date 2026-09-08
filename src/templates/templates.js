@@ -33,7 +33,7 @@ const icons = {
 
 /* ---------- Head ---------- */
 const BASE_URL = 'https://vivamais.expostacker.com.br';
-const DEFAULT_OG_IMAGE = BASE_URL + '/og-image.png';
+const DEFAULT_OG_IMAGE = BASE_URL + '/og-image.jpg';
 
 function renderHead(pageTitle, metaDescription, options) {
   options = options || {};

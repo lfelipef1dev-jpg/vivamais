@@ -294,7 +294,7 @@ function renderHome() {
     activeNav: 'home',
     root: '',
     canonical: 'index',
-    ogImage: 'og-image.png',
+    ogImage: 'og-image.jpg',
     extraScripts: ['scripts/home-script.js'],
     jsonLd: [
       T.buildMedicalClinic(),
