@@ -1,8 +1,0 @@
-perf: adiciona preload da imagem LCP (img-hero.webp) na home
-
-- Adiciona opcao extraHead em templates.js para preloads customizados.
-- Aplica <link rel="preload" as="image" ...> no hero da home.
-
-Generated with Devin
-
-Co-Authored-By: Devin <158243242+devin-ai-integration[bot]@users.noreply.github.com>
