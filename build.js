@@ -39,6 +39,8 @@ function writeOut(rel, content) {
 function copyAssets() {
   // CSS
   copyDir(path.join(SRC, 'styles'), path.join(OUT, 'styles'));
+  // Fonts
+  copyDir(path.join(SRC, 'fonts'), path.join(OUT, 'fonts'));
   // JS
   copyDir(path.join(SRC, 'scripts'), path.join(OUT, 'scripts'));
   // Imagens existentes na raiz
