@@ -43,10 +43,6 @@ function renderHead(pageTitle, metaDescription, options) {
   const cssTags = css.map(function (c) {
     return '<link rel="stylesheet" href="' + (options.root || '') + c + '">';
   }).join('\n  ');
-  const extraScripts = (options.extraScripts || []).map(function (s) {
-    return '<script src="' + (options.root || '') + s + '" defer></script>';
-  }).join('\n  ');
-
   /* Canonical URL */
   const canonicalSlug = options.canonical || '';
   const canonicalUrl = canonicalSlug === 'index' || canonicalSlug === ''
@@ -92,13 +88,9 @@ function renderHead(pageTitle, metaDescription, options) {
     '  <meta name="twitter:description" content="' + escapeAttr(desc) + '">',
     '  <meta name="twitter:image" content="' + escapeAttr(ogImage) + '">',
     '  <meta name="theme-color" content="#0D9488">',
-    '  <link rel="icon" type="image/png" href="' + (options.root || '') + 'favicon.png" sizes="1254x1254">',
+    '  <link rel="icon" type="image/png" href="' + (options.root || '') + 'favicon.png" sizes="180x180">',
     '  <link rel="apple-touch-icon" href="' + (options.root || '') + 'favicon.png">',
-    '  <link rel="preconnect" href="https://fonts.googleapis.com">',
-    '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
-    '  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">',
-    '  ' + cssTags,
-    '  ' + extraScripts
+    '  ' + cssTags
   ];
   if (jsonLdBlocks) {
     headLines.push(jsonLdBlocks);
@@ -166,8 +158,12 @@ function renderSearchOverlay(root) {
 }
 
 /* ---------- Footer (premium) ---------- */
-function renderFooter(root) {
+function renderFooter(root, options) {
   root = root || '';
+  options = options || {};
+  const extraScripts = (options.extraScripts || []).map(function (s) {
+    return '<script src="' + root + s + '" defer></script>';
+  }).join('\n  ');
   const specList = specialties.slice(0, 6).map(function (s) {
     return '<li><a href="' + root + 'especialidade-' + s.slug + '.html">' + escapeHtml(s.name) + '</a></li>';
   }).join('');
@@ -220,7 +216,8 @@ function renderFooter(root) {
     '  </div>',
     '</footer>',
     '<script src="' + root + 'scripts/app.js" defer></script>',
-    '<script src="' + root + 'scripts/search.js" defer></script>'
+    '<script src="' + root + 'scripts/search.js" defer></script>',
+    '  ' + extraScripts
   ].join('\n');
 }
 
@@ -236,7 +233,7 @@ function renderLayout(pageTitle, metaDescription, content, options) {
     '<main id="conteudo">',
     content,
     '</main>',
-    renderFooter(root),
+    renderFooter(root, options),
     '</body>',
     '</html>'
   ].join('\n');
