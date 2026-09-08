@@ -89,7 +89,7 @@ function renderHead(pageTitle, metaDescription, options) {
     '  <meta name="twitter:description" content="' + escapeAttr(desc) + '">',
     '  <meta name="twitter:image" content="' + escapeAttr(ogImage) + '">',
     '  <meta name="theme-color" content="#0D9488">',
-    '  <link rel="icon" type="image/svg+xml" href="' + (options.root || '') + 'favicon.svg">',
+    '  <link rel="icon" type="image/png" href="' + (options.root || '') + 'favicon.png">',
     '  <link rel="preload" as="font" type="font/woff2" href="' + (options.root || '') + 'fonts/inter-400-latin.woff2" crossorigin>',
     '  ' + cssTags,
     '  ' + extraHead
