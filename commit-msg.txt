@@ -1,9 +1,0 @@
-fix: regenera medica1 e medico2 para evitar duplicatas na equipe
-
-- medica1.jpg (Diana Rocha): nova foto distinta com cabelo ruivo.
-- medico2.jpg (Eduardo Santos): nova foto masculina madura.
-- Ambas geradas via DALL-E 3 no Chrome CDP 9224.
-
-Generated with Devin
-
-Co-Authored-By: Devin <158243242+devin-ai-integration[bot]@users.noreply.github.com>
