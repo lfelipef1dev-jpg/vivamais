@@ -43,6 +43,7 @@ function renderHead(pageTitle, metaDescription, options) {
   const cssTags = css.map(function (c) {
     return '<link rel="stylesheet" href="' + (options.root || '') + c + '">';
   }).join('\n  ');
+  const extraHead = (options.extraHead || []).join('\n  ');
   /* Canonical URL */
   const canonicalSlug = options.canonical || '';
   const canonicalUrl = canonicalSlug === 'index' || canonicalSlug === ''
@@ -91,7 +92,8 @@ function renderHead(pageTitle, metaDescription, options) {
     '  <link rel="icon" type="image/png" href="' + (options.root || '') + 'favicon.png" sizes="180x180">',
     '  <link rel="apple-touch-icon" href="' + (options.root || '') + 'favicon.png">',
     '  <link rel="preload" as="font" type="font/woff2" href="' + (options.root || '') + 'fonts/inter-400-latin.woff2" crossorigin>',
-    '  ' + cssTags
+    '  ' + cssTags,
+    '  ' + extraHead
   ];
   if (jsonLdBlocks) {
     headLines.push(jsonLdBlocks);

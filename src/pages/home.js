@@ -295,6 +295,7 @@ function renderHome() {
     root: '',
     canonical: 'index',
     ogImage: 'og-image.jpg',
+    extraHead: ['<link rel="preload" as="image" href="img-hero.webp" type="image/webp" fetchpriority="high">'],
     extraScripts: ['scripts/home-script.js'],
     jsonLd: [
       T.buildMedicalClinic(),
